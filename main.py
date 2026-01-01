@@ -13,7 +13,7 @@ def add_expense():
         return
 
     try:
-        amount = float(amount)  # Validate numeric input for amount
+        amount = float(amount)    # Validate numeric input for amount
     except ValueError:
         status_label.config(text="Amount must be a valid number!", fg="red")
         return
@@ -119,5 +119,6 @@ if not os.path.exists("expenses.txt"):
 
 # Load existing expenses
 view_expenses()
+
 
 root.mainloop()
